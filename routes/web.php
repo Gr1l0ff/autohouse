@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
@@ -32,8 +33,10 @@ Route::get('/register', [RegisterController::class, 'index'])->name('register')-
 Route::post('/register', [RegisterController::class, 'store'])->name('register')->middleware('guest');
 
 
-Route::get('/cars', function(){
-  return view('cars.index');
-})->name('cars')->middleware('admin');
+Route::get('/cars', [CarsController::class, 'index'])->name('cars')->middleware('admin');
+
+
+Route::get('/car_add', [CarsController::class, 'index_store'])->name('car_add')->middleware('admin');
+
 
 });
