@@ -1,1 +1,192 @@
-*{padding:0;margin:0;box-sizing:border-box}body{font-family:Arial, Helvetica, sans-serif}.main-nav{position:fixed;height:7vh;width:100%}.main-nav ul{height:100%;width:100%;display:flex;align-items:center;padding-right:1rem;justify-content:space-between}.main-nav ul li{cursor:pointer;font-weight:bold;color:white;font-size:1.4rem;list-style:none}.main-nav ul li a{text-decoration:none;color:white}.sidenav{height:100%;width:0;position:fixed;z-index:1;top:0;right:0;background-color:#111;overflow-x:hidden;transition:0.5s;padding-top:1rem;font-size:1.5rem}.sidenav p{text-align:right;color:white;padding-right:1rem}.sidenav div{display:flex;flex-direction:column}.sidenav div a{text-align:center;text-decoration:none;color:White;font-size:#f1f3f8;width:100%;padding:0.5rem 0}.sidenav div a:hover{background:#393b44}.sidenav button{color:white;background:none;border:0;width:100%;text-align:center;padding:0.5rem 0}.sidenav button:hover{background:#393b44}.main-home{width:100%;height:100vh;background-image:url("../../public/img/porsche.jpg");background-repeat:no-repeat;background-attachment:fixed;background-position:center}.main-home div{width:60%;text-align:center;position:absolute;left:20%;top:0;color:#f1f3f8}.main-home div h2{font-size:4rem}.main-home div p{display:none;font-size:1.4rem}.car-section{min-height:38vh;background:#d6e0f0;display:flex;overflow:hidden}.car-section div{display:none;width:33.3%;height:30vh}.car-section div img{filter:brightness(80%);width:80%;margin:0 10%;margin-top:2rem;height:90%;border-radius:10px}.car-section div p{text-align:center;font-size:1.2rem;font-weight:bold;padding-top:0.8rem}#email-form{background:#8d93ab;width:100%;min-height:40vh;padding:2rem 0}#email-form .form-div{opacity:0;padding:0 2rem;padding-top:3rem;padding-bottom:1rem;background:#d6e0f0;width:60%;height:0;margin:0 auto;border-radius:10px}footer{min-height:13vh;display:flex;background:#393b44;color:#fff;align-items:center;justify-content:center}.login-main{background:#8d93ab;min-height:87vh;font-size:1.4r}.login-main h1{font-size:3.5rem;font-family:"Odibee Sans",cursive}.login-main input{font-size:1.1rem}.login-main label{font-size:1.4rem}.register-main{background:#8d93ab;min-height:87vh}.register-main label{font-size:1.4rem}.register-main h1{font-size:3.5rem;font-family:"Odibee Sans",cursive}.register-main input{font-size:1.1rem}.main-cars{background:#8d93ab;min-height:87vh}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-nav {
+  position: fixed;
+  height: 7vh;
+  width: 100%;
+}
+.main-nav ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+  justify-content: space-between;
+}
+.main-nav ul li {
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  font-size: 1.4rem;
+  list-style: none;
+}
+.main-nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+}
+.sidenav p {
+  text-align: right;
+  color: white;
+  padding-right: 1rem;
+}
+.sidenav div {
+  display: flex;
+  flex-direction: column;
+}
+.sidenav div a {
+  text-align: center;
+  text-decoration: none;
+  color: White;
+  font-size: #f1f3f8;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+.sidenav div a:hover {
+  background: #393b44;
+}
+.sidenav button {
+  color: white;
+  background: none;
+  border: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+.sidenav button:hover {
+  background: #393b44;
+}
+
+.main-home {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/images/porsche.jpg?b54c212f667a7b4df407272a9bdb5bee);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.main-home div {
+  width: 60%;
+  text-align: center;
+  position: absolute;
+  left: 20%;
+  top: 0;
+  color: #f1f3f8;
+}
+.main-home div h2 {
+  font-size: 4rem;
+}
+.main-home div p {
+  display: none;
+  font-size: 1.4rem;
+}
+
+.car-section {
+  min-height: 38vh;
+  background: #d6e0f0;
+  display: flex;
+  overflow: hidden;
+}
+.car-section div {
+  display: none;
+  width: 33.3%;
+  height: 30vh;
+}
+.car-section div img {
+  filter: brightness(80%);
+  width: 80%;
+  margin: 0 10%;
+  margin-top: 2rem;
+  height: 90%;
+  border-radius: 10px;
+}
+.car-section div p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-top: 0.8rem;
+}
+
+#email-form {
+  background: #8d93ab;
+  width: 100%;
+  min-height: 40vh;
+  padding: 2rem 0;
+}
+#email-form .form-div {
+  opacity: 0;
+  padding: 0 2rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  background: #d6e0f0;
+  width: 60%;
+  height: 0;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+footer {
+  min-height: 13vh;
+  display: flex;
+  background: #393b44;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-main {
+  background: #8d93ab;
+  min-height: 87vh;
+  font-size: 1.4r;
+}
+.login-main h1 {
+  font-size: 3.5rem;
+  font-family: "Odibee Sans", cursive;
+}
+.login-main input {
+  font-size: 1.1rem;
+}
+.login-main label {
+  font-size: 1.4rem;
+}
+
+.register-main {
+  background: #8d93ab;
+  min-height: 87vh;
+}
+.register-main label {
+  font-size: 1.4rem;
+}
+.register-main h1 {
+  font-size: 3.5rem;
+  font-family: "Odibee Sans", cursive;
+}
+.register-main input {
+  font-size: 1.1rem;
+}
+
+.main-cars {
+  background: #8d93ab;
+  min-height: 87vh;
+}

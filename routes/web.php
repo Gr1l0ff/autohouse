@@ -37,6 +37,7 @@ Route::get('/cars', [CarsController::class, 'index'])->name('cars')->middleware(
 
 
 Route::get('/car_add', [CarsController::class, 'index_store'])->name('car_add')->middleware('admin');
+Route::post('/car_add', [CarsController::class, 'store'])->name('car_add')->middleware('admin');
 
 
 });

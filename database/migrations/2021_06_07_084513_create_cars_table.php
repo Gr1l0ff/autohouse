@@ -20,10 +20,8 @@ class CreateCarsTable extends Migration
             $table->string('top_speed');
             $table->double('price');
             $table->foreignId('user_id')
-            ->constrained()
-            ->nullable()
             ->onUpdate('cascade')
-            ->onDelete('cascade');
+            ->onDelete('cascade')->default('0');
             $table->timestamps();
         });
     }
