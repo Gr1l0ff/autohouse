@@ -9,7 +9,14 @@ class CarsController extends Controller
 {
   public function index(){
 
-    return view('cars.index');
+    $cars = Cars::with('user')->get();
+    // $posts = $cars->user;
+
+    
+
+    // dd($cars);
+
+    return view('cars.index', ['cars' => $cars]);
     
   }
 
@@ -39,7 +46,7 @@ class CarsController extends Controller
 
     ]);
 
-    return redirect('/');
+    return redirect()->route('cars');
     
   }
 }

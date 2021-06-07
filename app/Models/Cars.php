@@ -15,4 +15,9 @@ class Cars extends Model
       'top_speed',
       'price',
   ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
