@@ -6,7 +6,7 @@
       <h1 class="text-center pb-5">Admin panel</h1>
       <a href="{{ route('car_add') }}" class="btn btn-primary form-control text-center p-2 m-3 text-decoration-none">Dodaj Avto</a>
 
-      <table class="table table-dark table-hover mx-3 mt-4 align-middle">
+      <table class="table table-dark table-hover mx-3 mt-5 align-middle">
         <thead>
           <tr class="text-center">
             <th scope="col">#</th>
@@ -30,8 +30,8 @@
             @else 
             <td>{{ $car->user_id }}</td>
             @endif
-            <td><a href=""class="btn btn-warning">Posodobi</a></td>
-            <td><a href=""class="btn btn-danger">Zbriši</a></td>
+            <td><a href="{{ route('update_cars', ['id' => $car->id] )}}"class="btn btn-warning">Posodobi</a></td>
+            <td><a href="{{ route('delete_cars', ['id' => $car->id] )}}"class="btn btn-danger" onclick="return confirm('Ali ste prepričani, da hočete zbrisati ta avto?')">Zbriši</a></td>
             <td><a href=""class="btn btn-success">Dodaj Sliko</a></td>
            
           </tr>

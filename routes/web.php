@@ -36,8 +36,18 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register')
 Route::get('/cars', [CarsController::class, 'index'])->name('cars')->middleware('admin');
 
 
+//update cars
+Route::get('/cars/update_cars/{id}', [CarsController::class, 'index_update'])->name('update_cars')->middleware('admin');
+
+Route::post('/cars/update_cars', [CarsController::class, 'update'])->name('updated_cars')->middleware('admin');
+
+
+//adding cars
 Route::get('/car_add', [CarsController::class, 'index_store'])->name('car_add')->middleware('admin');
 Route::post('/car_add', [CarsController::class, 'store'])->name('car_add')->middleware('admin');
 
+
+//delete cares
+Route::get('/cars/delete_cars/{id}', [CarsController::class, 'destroy'])->name('delete_cars')->middleware('admin');
 
 });
