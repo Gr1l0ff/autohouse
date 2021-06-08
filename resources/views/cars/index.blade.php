@@ -32,7 +32,7 @@
             @endif
             <td><a href="{{ route('update_cars', ['id' => $car->id] )}}"class="btn btn-warning">Posodobi</a></td>
             <td><a href="{{ route('delete_cars', ['id' => $car->id] )}}"class="btn btn-danger" onclick="return confirm('Ali ste prepričani, da hočete zbrisati ta avto?')">Zbriši</a></td>
-            <td><a href=""class="btn btn-success">Dodaj Sliko</a></td>
+            <td><a href="{{ route('image_index', ['id' => $car->id] )}}"class="btn btn-success">Dodaj Sliko</a></td>
            
           </tr>
           @endforeach
