@@ -41,8 +41,9 @@ class ImageController extends Controller
       //image ime public v path
       $request->img_name->move(public_path('images'), $imageName);
 
+      
       $image = new Image();
-      $image->img_name = $filename;
+      $image->img_name = $imageName;
 
       $image->car()->associate($car);
       $image->save();

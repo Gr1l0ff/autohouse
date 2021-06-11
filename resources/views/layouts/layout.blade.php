@@ -26,6 +26,8 @@
        
    
       <a href="#">Servisi</a>
+      <a href="{{ route('offer') }}">Ponudba</a>
+
       @guest
         <a href="{{ route('register') }}">Registracija</a>
         <a href="{{ route('login') }}">Prijava</a>

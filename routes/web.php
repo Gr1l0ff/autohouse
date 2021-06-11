@@ -3,6 +3,7 @@
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OfferController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,6 +42,10 @@ Route::get('/cars', [CarsController::class, 'index'])->name('cars')->middleware(
 Route::get('/cars/update_cars/{id}', [CarsController::class, 'index_update'])->name('update_cars')->middleware('admin');
 
 Route::post('/cars/update_cars', [CarsController::class, 'update'])->name('updated_cars')->middleware('admin');
+
+
+//offers
+Route::get('/offer', [OfferController::class, 'index'])->name('offer');
 
 
 //adding cars
