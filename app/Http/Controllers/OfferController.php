@@ -13,7 +13,7 @@ class OfferController extends Controller
     public function index(){
 
 
-      $cars = Image::with('car')->paginate(8);
+      $cars = DB::table('images')->join('cars', 'images.car_id', '=', 'cars.id')->where('cars.user_id', 'not', '0')->paginate(5);
 
       // dd($cars);
 
@@ -24,7 +24,7 @@ class OfferController extends Controller
 
       $car = DB::table('images')->join('cars', 'images.car_id', '=', 'cars.id')->where('cars.id', '=', $id)->get();
 
-
+      
 
       return view('offer.show', ['car' => $car[0]]);
 

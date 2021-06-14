@@ -36,7 +36,7 @@
               <div class="modal-footer">
                 <form action="{{ route('car_taken') }}" method="POST">
                   @csrf
-                  <input type="hidden" name="car_id" value="{{ $car->id }}">
+                  <input type="hidden" name="car_id" value="{{ $car->car_id }}">
 
                   <button type="button" class="btn btn-danger mx-2 px-5" data-bs-dismiss="modal">Zapri</button>
                   <button type="submit" class="btn btn-success mx-2 px-5">Potrdi</button>
