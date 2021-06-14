@@ -189,9 +189,23 @@ footer {
 .main-cars {
   background: #8d93ab;
   min-height: 87vh;
+  padding-bottom: 2rem;
 }
 
 .main-offer {
   background: #8d93ab;
   min-height: 87vh;
+  padding-bottom: 2rem;
+}
+.main-offer .container {
+  display: none;
+}
+.main-offer .showImg {
+  width: 80%;
+  margin: 0 auto;
+  height: 70vh;
+}
+.main-offer .carInfo {
+  width: 80%;
+  margin: 1rem auto;
 }

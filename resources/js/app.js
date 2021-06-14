@@ -6,6 +6,8 @@ require('./bootstrap');
 $(document).ready(function(){
 
   $('#home-heading').animate({top: '30vh'}, 1000);
+  
+  $('.main-offer > div').fadeIn(800);
 
   setTimeout(() => {
     $('#home-heading > p').fadeIn(1000);

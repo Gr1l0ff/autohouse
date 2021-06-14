@@ -228,6 +228,8 @@ footer {
 .main-cars {
   background: $third-color;
   min-height: 87vh;
+  padding-bottom: 2rem;
+
 }
 
 //offers
@@ -235,4 +237,22 @@ footer {
 .main-offer {
   background: $third-color;
   min-height: 87vh;
+  padding-bottom: 2rem;
+
+
+  .container {
+    display: none;
+  }
+  .showImg {
+    width: 80%;
+    margin: 0 auto;
+    height: 70vh;
+  }
+  .carInfo {
+    
+   
+    width: 80%;
+    margin: 1rem auto;
+  }
+  
 }

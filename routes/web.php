@@ -47,6 +47,10 @@ Route::post('/cars/update_cars', [CarsController::class, 'update'])->name('updat
 //offers
 Route::get('/offer', [OfferController::class, 'index'])->name('offer');
 
+Route::get('/offer/{id}', [OfferController::class, 'show'])->name('offer_cars')->middleware('auth');
+
+Route::post('/cartaken', [OfferController::class, 'store'])->name('car_taken')->middleware('auth');
+
 
 //adding cars
 Route::get('/car_add', [CarsController::class, 'index_store'])->name('car_add')->middleware('admin');
