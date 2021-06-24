@@ -33,12 +33,21 @@ class OfferController extends Controller
     public function store(Request $request){
 
       $car = Cars::find($request->car_id);
+
+      // dd($car);
       
-      $car->user_id = Auth::id();
+      if($car != null) {
+        if($car->user_id == 0){
+        $car->user_id = Auth::id();
 
-      $car->save();
+        $car->save();
 
-      return redirect()->route('offer');
+        return redirect()->route('offer');
+        }
+        return redirect('/');
+      } else {
+        return redirect('/');
+      }
 
 
     }

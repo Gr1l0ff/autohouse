@@ -33,6 +33,7 @@
         <a href="{{ route('login') }}">Prijava</a>
       @endguest
       @auth
+        <a href="{{ route('orders') }}">Vaša naročila</a>
         @if(auth()->user()->is_admin == 1)
           <a href="{{ route('cars') }}">Avtomobili</a>
       @endif

@@ -4,6 +4,7 @@ use App\Http\Controllers\CarsController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OfferController;
+use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -60,8 +61,8 @@ Route::post('/car_add', [CarsController::class, 'store'])->name('car_add')->midd
 //delete cares
 Route::get('/cars/delete_cars/{id}', [CarsController::class, 'destroy'])->name('delete_cars')->middleware('admin');
 
-
-
+//orders
+Route::get('/orders', [OrdersController::class, 'index'])->name('orders')->middleware('auth');
 //images
 
 Route::get('/image_upload/{id}', [ImageController::class, 'index'])->name('image_index')->middleware('admin');
